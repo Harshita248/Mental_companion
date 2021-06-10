@@ -28,7 +28,7 @@ class _DoctorLoginState extends State<DoctorLogin> {
   bool isLoading = false;
 
   signIn() async {
-    if (formKey.currentState.validate()) {
+    if (formKey.currentState!.validate()) {
       setState(() {
         isLoading = true;
       });
@@ -125,7 +125,7 @@ class _DoctorLoginState extends State<DoctorLogin> {
                                       validator: (val) {
                                         return RegExp(
                                                     r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
-                                                .hasMatch(val)
+                                                .hasMatch(val!)
                                             ? null
                                             : "Please Enter Correct Email";
                                       },
@@ -139,7 +139,7 @@ class _DoctorLoginState extends State<DoctorLogin> {
                                     child: TextFormField(
                                       obscureText: true,
                                       validator: (val) {
-                                        return val.length > 6
+                                        return val!.length > 6
                                             ? null
                                             : "Enter Password 6+ characters";
                                       },

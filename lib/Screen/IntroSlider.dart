@@ -111,7 +111,7 @@ class _IntroSliderState extends State<IntroSlider> {
     );
   }
 
-  Widget _buildPage({String title, String icon, Color pageBg}) {
+  Widget _buildPage({required String title, required String icon, required Color pageBg}) {
 
     final screenSize = MediaQuery.of(context).size;
     final TextStyle titleStyle = TextStyle(

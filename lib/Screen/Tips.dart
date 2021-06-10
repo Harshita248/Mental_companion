@@ -27,7 +27,7 @@ class _TipsState extends State<Tips> {
         separatorBuilder: (context, index) => SizedBox(height: 10,),
         itemBuilder: (context, index) {
           return GestureDetector(
-            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => TipsDesc(desc: tipsDesc[index],))),
+            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => TipsDesc(desc: tipsDesc[index], img: '',))),
             child: CustomListView(title: tips[index], subtitle: ""),
           );
         },
