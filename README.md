@@ -1,6 +1,10 @@
-# mental_companion
+# Mental_companion
 
-A new Flutter project.
+### In today's Era, most of people are suffering from depression but they don’t take it seriously that mental health matters.
+In this era of competition and criticism there are so many people who haven’t talked about it and due to this many drastic result such as suicide are increasing too much.
+Hence, this app will bring awareness regarding depression and tell people that they can reach out others and are not alone in this fight. People can open up and can ease their way of living. 
+
+`A new Flutter project still in progress.`
 
 ## Getting Started
 
