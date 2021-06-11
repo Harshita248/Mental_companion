@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 class Chat extends StatefulWidget {
   final String chatRoomId;
 
-  Chat({this.chatRoomId});
+  Chat({required this.chatRoomId});
 
   @override
   _ChatState createState() => _ChatState();
@@ -24,7 +24,7 @@ class _ChatState extends State<Chat> {
       stream: chats,
       builder: (context, snapshot){
         return snapshot.hasData ?  ListView.builder(
-          itemCount: snapshot.data.documents.length,
+          itemCount: snapshot.data!.documents.length,
             itemBuilder: (context, index){
               return MessageTile(
                 message: snapshot.data.documents[index].data["message"],
