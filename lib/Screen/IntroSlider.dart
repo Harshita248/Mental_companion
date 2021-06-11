@@ -69,7 +69,7 @@ class _IntroSliderState extends State<IntroSlider> {
                     builder: CustomPaginationBuilder(
                         activeSize: Size(10.0, 20.0),
                         size: Size(10.0, 15.0),
-                        color: Colors.grey.shade600
+                        color: Colors.grey.shade600,
                     )
                 ),
               )),

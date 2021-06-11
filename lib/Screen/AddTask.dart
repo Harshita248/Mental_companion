@@ -8,8 +8,8 @@ class Addtsk extends StatefulWidget {
   _AddtskState createState() => _AddtskState();
 }
 
-String _title;
-String _title1;
+late String _title;
+late String _title1;
 final _formKey = GlobalKey<FormState>();
 // final _formKey1 = GlobalKey<FormState>();
 FocusNode myFocusNode = new FocusNode();
@@ -18,9 +18,9 @@ FocusNode myFocusNode1 = new FocusNode();
 DateTime selectedDate = DateTime.now();
 TimeOfDay time = new TimeOfDay.now();
 TimeOfDay time2 = new TimeOfDay.now();
-TimeOfDay t;
-int _hr;
-double _minute;
+late TimeOfDay t;
+late int _hr;
+late double _minute;
 //double h = ScreenUtil().setHeight(0);
 
 class _AddtskState extends State<Addtsk> {
@@ -44,7 +44,7 @@ class _AddtskState extends State<Addtsk> {
     print(_minute);
     print(_hr);
     if (_hr >= 0 && _minute > 0) {
-      if (form.validate()) {
+      if (form!.validate()) {
         form.save();
         //createRecord();
         // Navigator.push(context, MaterialPageRoute(builder: (context) => Secondpage()));
@@ -71,7 +71,7 @@ class _AddtskState extends State<Addtsk> {
   // TimeOfDay t;
 
   Future<Null> _selectDate(BuildContext context) async {
-    final DateTime picked = await showDatePicker(
+    final DateTime? picked = await showDatePicker(
         context: context,
         initialDate: selectedDate,
         firstDate:
@@ -339,7 +339,7 @@ class _AddtskState extends State<Addtsk> {
 }
 
 class Clocks extends StatefulWidget {
-  Clocks({Key key}) : super(key: key);
+  Clocks({required Key key}) : super(key: key);
 
   @override
   _ClocksState createState() => _ClocksState();
@@ -424,7 +424,7 @@ class _ClocksState extends State<Clocks> {
                       }
                     },
                     validator: (value) =>
-                        value.isEmpty ? 'Please enter Title of task' : null,
+                        value!.isEmpty ? 'Please enter Title of task' : null,
                   ),
                 ],
               ),
@@ -491,7 +491,7 @@ class _ClocksState extends State<Clocks> {
                       }
                     },
                     validator: (value) =>
-                        value.isEmpty ? 'Please enter Title of task' : null,
+                        value!.isEmpty ? 'Please enter Title of task' : null,
                   ),
                 ],
               ),
