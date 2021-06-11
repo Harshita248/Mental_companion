@@ -21,8 +21,8 @@ class CustomPaginationBuilder extends SwiperPlugin {
   @override
   Widget build(BuildContext context, SwiperPluginConfig config) {
     ThemeData themeData = Theme.of(context);
-    Color activeColor = this.activeColor ?? themeData.primaryColor;
-    Color color = this.color ?? themeData.scaffoldBackgroundColor;
+    Color activeColor = this.activeColor;
+    Color color = this.color;
 
     List<Widget> list = [];
 

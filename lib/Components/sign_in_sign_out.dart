@@ -5,9 +5,9 @@ final FirebaseAuth _auth = FirebaseAuth.instance;
 final GoogleSignIn googleSignIn = GoogleSignIn();
 
 
-String name;
-String email;
-String imageUrl;
+late String name;
+late String email;
+late String imageUrl;
 
 Future<String> signInWithGoogle() async {
   final GoogleSignInAccount googleSignInAccount = await googleSignIn.signIn();

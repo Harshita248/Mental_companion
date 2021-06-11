@@ -36,7 +36,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
 
    singUp() async {
 
-    if(formKey.currentState.validate()){
+    if(formKey.currentState!.validate()){
       setState(() {
         isLoading = true;
       });
@@ -135,7 +135,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                   style: simpleTextStyle(),
                                   controller: nameController,
                                   validator: (val){
-                                    return val.isEmpty || val.length < 3 ? "Enter Username 3+ characters" : null;
+                                    return val!.isEmpty || val.length < 3 ? "Enter Username 3+ characters" : null;
                                   },
                                   decoration: textFieldInputDecoration("username"),
                                 ),
@@ -146,7 +146,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                   controller: emailController,
                                   style: simpleTextStyle(),
                                   validator: (val){
-                                    return RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+").hasMatch(val) ?
+                                    return RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+").hasMatch(val!) ?
                                     null : "Enter correct email";
                                   },
                                   decoration: textFieldInputDecoration("email"),
@@ -160,7 +160,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                   decoration: textFieldInputDecoration("password"),
                                   controller: passwordController,
                                   validator:  (val){
-                                    return val.length < 6 ? "Enter Password 6+ characters" : null;
+                                    return val!.length < 6 ? "Enter Password 6+ characters" : null;
                                   },
 
                                 ),
@@ -193,15 +193,37 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                             ),
                           ),
                         ),
+                    
+                      ],
+                    ),
+                    Positioned(
+                      left: 0,
+                      top: ScreenUtil().setHeight(90),
+                      right: 0,
+                      child: Column(
+                        children: <Widget>[
+                          Hero(
+                            tag: 'logo',
+                            child: Container(
+                              height: ScreenUtil().setHeight(500),
+                              child: Image.asset(
+                                'images/logo.png',
+                                fit: BoxFit.contain,
+                              ),
+                            ),
+                          ),
+                          Center(child: Text('Mind Peace',style: TextStyle(fontWeight: FontWeight.w700,color: Colors.black,fontSize: ScreenUtil().setHeight(30)),)),
+                        ],
+                      ),
 
-
-
-
-
-
-
-
-
-
-
-
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          );
+        },
+      ),
+    );
+  }
+}
