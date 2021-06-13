@@ -2,8 +2,9 @@
 
 
 ### In today's Era, most of people are suffering from depression but they don’t take it seriously that mental health matters.
-In this era of competition and criticism there are so many people who haven’t talked about it and due to this many drastic result such as suicide are increasing too much.
-Hence, this app will bring awareness regarding depression and tell people that they can reach out others and are not alone in this fight. People can open up and can ease their way of living. 
+_In this era of competition and criticism there are so many people who haven’t talked about it and due to this many drastic result such as suicide are increasing too much.
+Hence, this app will bring awareness regarding depression and tell people that they can reach out others and are not alone in this fight. People can open up and can ease their way of living._
+#### The objective of this app is to assist the people fighting depression and mental health issues. This app contains several module which can help the user maintain a better health care, people can chat with their doctor, can listen to soothing music , read about depression, keep the record of their daily activity regarding meditation.
 
 `A new Flutter project still in progress.`
 
