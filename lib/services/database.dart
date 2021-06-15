@@ -49,7 +49,7 @@ getDoctorInfo(String email) async {
         .getDocuments();
   }
 
-  Future<bool> addChatRoom(chatRoom, chatRoomId) {
+  Future<bool> addChatRoom(dynamic chatRoom,dynamic chatRoomId)async {
     Firestore.instance
         .collection("chatRoom")
         .document(chatRoomId)
@@ -69,7 +69,7 @@ getDoctorInfo(String email) async {
   }
 
 
-  Future<void> addMessage(String chatRoomId, chatMessageData){
+  Future<void> addMessage(String chatRoomId, chatMessageData)async {
 
     Firestore.instance.collection("chatRoom")
         .document(chatRoomId)
