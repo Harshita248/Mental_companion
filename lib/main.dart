@@ -45,8 +45,8 @@ class _MeditationAppState extends State<MeditationApp> {
       debugShowCheckedModeBanner: false,
       title: "Mental Companion",
       builder: (context,child)=> MediaQuery(
-        data:MediaQuery.of(context).copyWith(alwaysUse24HourFormat: true),
-        child: child,
+        data:MediaQuery.of(context).copyWith(alwaysUse24HourFormat: true), child: child,
+  
       ),
       home: userIsLoggedIn != null ?  userIsLoggedIn ? Tabs() : WelcomeScreen():Container(child: Center(child: IntroSlider()),),
       routes: <String,WidgetBuilder>{
