@@ -9,6 +9,10 @@ Hence, this app will bring awareness regarding depression and tell people that t
 `A new Flutter project still in progress.`
 
 
+
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/Harshita248)
+
+
 ## Getting Started
 
 [![flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://github.com/Harshita248)
