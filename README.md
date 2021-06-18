@@ -1,5 +1,6 @@
 # Mental_companion
 
+`DO YOU TALK ABOUT IT?`
 
 ### In today's Era, many people are suffering from depression but they don’t take it seriously that mental health matters. The application is for all users suffering from mental pressure and looking for mental peace. Also, users can contact verified doctors who will be available for the assistance.
 _In this era of competition and criticism there are many people who don't find it suitable to talk about it, due to which drastic results such as suicide are increasing.
